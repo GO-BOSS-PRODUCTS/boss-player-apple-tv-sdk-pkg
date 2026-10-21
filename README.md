@@ -20,7 +20,7 @@ The package downloads a compiled XCFramework for arm64 Apple TV devices and arm6
 
 ## Release status
 
-The 1.0.0 manifest and checksum are prepared, but the release asset has not yet been published. Package resolution requires uploading `BossAppleTVPlayerSDK.xcframework.zip` to this repository's GitHub release tagged `1.0.0`.
+The 1.0.1 manifest and checksum are prepared, but the release asset has not yet been published. Package resolution requires uploading `BossAppleTVPlayerSDK.xcframework.zip` to this repository's GitHub release tagged `1.0.1`.
 
 ## Maintainer release process
 
