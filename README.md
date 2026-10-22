@@ -20,8 +20,19 @@ The package downloads a compiled XCFramework for arm64 Apple TV devices and arm6
 
 ## Release status
 
-The 1.0.1 manifest and checksum are prepared, but the release asset has not yet been published. Package resolution requires uploading `BossAppleTVPlayerSDK.xcframework.zip` to this repository's GitHub release tagged `1.0.1`.
+The 1.0.2 manifest and checksum are prepared, but the release asset has not yet been published. Package resolution requires uploading `BossAppleTVPlayerSDK.xcframework.zip` to this repository's GitHub release tagged `1.0.2`.
 
 ## Maintainer release process
 
 Build the XCFramework from the private source repository. Upload the ZIP to the corresponding release in this repository, update the root manifest's binary URL and SHA-256 checksum, and tag the manifest commit with the release version. Keep implementation sources, build scripts, and source history in the private repository.
+
+## Publishing 1.0.2
+
+1. Commit and push the updated root `Package.swift` and this README.
+2. Create a GitHub release with tag `1.0.2` targeting that package commit.
+3. Attach `Artifacts/1.0.2/BossAppleTVPlayerSDK.xcframework.zip` without renaming or recompressing it, then publish the release.
+4. In the consuming app, select package version `1.0.2`. An exact `1.0.1` requirement will not select `1.0.2` automatically.
+
+A version tag is required for version-based SwiftPM resolution. Uploading a ZIP or changing the manifest alone does not create a package version. The tagged manifest must point to the matching downloadable release asset and its checksum. For a private repository, Xcode needs access to both Git and the release download.
+
+If Xcode still reports no matching version after publication, verify the tag is visible to the signed-in GitHub account, then use File → Packages → Reset Package Caches and resolve again.
