@@ -20,18 +20,18 @@ The package downloads a compiled XCFramework for arm64 Apple TV devices and arm6
 
 ## Release status
 
-The 1.0.3 manifest and checksum are prepared, but the release asset has not yet been published. Package resolution requires uploading `BossAppleTVPlayerSDK.xcframework.zip` to this repository's GitHub release tagged `1.0.3`.
+The 1.0.4 manifest and checksum are prepared, but the release asset has not yet been published. Package resolution requires uploading `BossAppleTVPlayerSDK.xcframework.zip` to this repository's GitHub release tagged `1.0.4`.
 
 ## Maintainer release process
 
 Build the XCFramework from the private source repository. Upload the ZIP to the corresponding release in this repository, update the root manifest's binary URL and SHA-256 checksum, and tag the manifest commit with the release version. Keep implementation sources, build scripts, and source history in the private repository.
 
-## Publishing 1.0.3
+## Publishing 1.0.4
 
 1. Commit and push the updated root `Package.swift` and this README.
-2. Create a GitHub release with tag `1.0.3` targeting that package commit.
-3. Attach `Artifacts/1.0.3/BossAppleTVPlayerSDK.xcframework.zip` without renaming or recompressing it, then publish the release.
-4. In the consuming app, select package version `1.0.3`. An exact `1.0.2` requirement will not select `1.0.3` automatically.
+2. Create a new GitHub release with tag `1.0.4` targeting the commit pushed in step 1. Confirm that commit’s `Package.swift` contains `/download/1.0.4/` and the new ZIP checksum before creating the tag. Do not reuse or move an existing tag.
+3. Attach `Artifacts/1.0.4/BossAppleTVPlayerSDK.xcframework.zip` without renaming or recompressing it, then publish the release.
+4. In the consuming app, select package version `1.0.4`. An exact `1.0.3` requirement will not select `1.0.4` automatically.
 
 A version tag is required for version-based SwiftPM resolution. Uploading a ZIP or changing the manifest alone does not create a package version. The tagged manifest must point to the matching downloadable release asset and its checksum. For a private repository, Xcode needs access to both Git and the release download.
 
