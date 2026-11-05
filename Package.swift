@@ -7,7 +7,7 @@ let package = Package(
     products: [.library(name: "BossAppleTVPlayerSDK", targets: ["BossAppleTVPlayerSDK"])],
     targets: [.binaryTarget(
         name: "BossAppleTVPlayerSDK",
-        url: "https://github.com/GO-BOSS-PRODUCTS/boss-player-apple-tv-sdk-pkg/releases/download/1.0.5/BossAppleTVPlayerSDK.xcframework.zip",
-        checksum: "2120b8b92c972001301667c8a5401ae6a063b82c36316920499af98a7c5c727b"
+        url: "https://github.com/GO-BOSS-PRODUCTS/boss-player-apple-tv-sdk-pkg/releases/download/1.0.6/BossAppleTVPlayerSDK.xcframework.zip",
+        checksum: "da9dc3f04b45872ce4f1ed27db0232a4c9fcb66f10d3b638d696e889b444a13a"
     )]
 )
